@@ -7,22 +7,19 @@ numbers or not
 
 int main()
 {
-    int a,b,ans,minimum,count=0;
-    printf("Enter the value of two numbers\n");
-    scanf("%d%d",&a,&b);
-   
-    minimum=a>b?b:a;
-    for(int i=1;i<=minimum;i++)
-    {
-        if(a%i==0 && b%i==0)
-        {
-            count++;
-        }
-    }
-    (count==1)?printf("%d and %d is co-prime numbers",a,b):printf("%d and %d is not co-prime numbers",a,b);
-    
+   int a,b,min,i;
+   printf("Enter two number\n");
+   scanf("%d%d",&a,&b);
+   min=a<b?a:b;
+   for(i=min;i>=1;i--)
+   {
+       if(a%i==0 && b%i==0)
+       break;
+   }
+   if(i==1)//means HCF must be equal to one.
+   printf("Co-prime");
+   else
+   printf("Not a co-prime number");
     
     return 0;
 }
-
-
