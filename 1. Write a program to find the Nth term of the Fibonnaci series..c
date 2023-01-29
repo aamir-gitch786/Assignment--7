@@ -14,11 +14,10 @@ int main()
     for(int i=1;i<=n;i++)
     {
         c=a+b;
-        if(i==n)
-        printf(" Value of %dth term in the fibonnaci series is %d ",n,c);
         a=b;
         b=c;
     }
+    printf("%dth term of the fibonnaci series is %d",n,c);
 
     return 0;
 }
