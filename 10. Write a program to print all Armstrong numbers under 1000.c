@@ -6,20 +6,20 @@
 #include<math.h>
 
 int main()
-{  int n,count,tem,tem1,sum,r,tem3;
+{  int n,count,tem,tem1,sum,tem3;
 for(n=1;n<1000;n++)
 {      
  sum=0;tem=n;tem1=n,count=0,tem3=n;
  //for finding the length of digits. 
-  while(tem3!=0)
+  while(tem3)
   {
     tem3/=10;
     count++;
   }
 //computing power accoding to digits present in the numbers and store it into sum variable.  
-  while(tem!=0)
-  { r=tem%10;
-    sum=sum+pow(r,count);
+  while(tem)
+  { 
+    sum=sum+pow(tem%10,count);
     tem=tem/10;
   }
 //chekcing the condition of armstrong . 
@@ -30,4 +30,3 @@ for(n=1;n<1000;n++)
 therefor n value become zero and program run in infinite loop.*/
    return 0;
 }
-
